@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+#left{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+}
+
+#left #overlay{
+    width: 100%;
+    height: 100%;
+    background-color: maroon;
+    position : absolute;
+    z-index: 9;
+    opacity: 0;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+
+#left #nav{
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    color: black;
+    font-size: 25px;
+    position: absolute;
+    z-index: 990;
+    opacity: 0;
+    animation-name: leftnav;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+
+#nav h3{
+    font-size: 20px;
+}
+
+#left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 50%;
+    position: absolute;
+    z-index: 99;
+    opacity: 0;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+
+#left>h1{
+    bottom: 4%;
+    right: 7%;
+    font-size: 70px;
+    text-align: right;
+    position: absolute;
+    z-index: 99;
+    opacity: 0;
+    animation-name: text;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+
+
+#left #plus{
+    position: absolute;
+    left: 5%;
+    bottom: 4%;
+    font-size: 25px;
+    font-weight: 100;
+    position: absolute;
+    z-index: 99;
+    overflow: hidden;
+    opacity: 0;
+    animation-name: leftnav;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+#right{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+
+#one{
+    width: 200px;
+    height: 200px;
+    position : absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#two{
+    width: 250px;
+    height: 310px;
+    position : absolute;
+    top: 35%;
+    left: 12%;
+}
+
+#three{
+    width: 200px;
+    height: 190px;
+    position : absolute;
+    bottom: 0;
+    right: 20%;
+}
+
+#right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    opacity: 0;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+
+#right h1{
+    position: absolute;
+    right: -15%;
+    top: 28%;
+    font-size: 60px;
+    rotate: -90deg;
+    opacity: 0;
+    animation-name: text;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+
+#right #circle{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    text-transform: uppercase;
+    font-size: 15px;
+    opacity: 0;
+    animation-name: leftnav;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+
+#circle p{
+    opacity: 0;
+    animation-name: text;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear{
+    0%{
+        transform: translateX(150%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(-30deg) scale(2);
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes text {
+    0%{
+        transform: translateY(150%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes leftnav {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes righttext {
+    0%{
+        transform: translateX(150%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
